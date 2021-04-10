@@ -43,6 +43,10 @@ public class MapTest {
             System.out.println(entry.getKey() + "　：" + entry.getValue());
         }
 
+        Map map = new HashMap();
+        map.put("leo",5);
+        map.put("kkk",10);
+        map.forEach((k,v) -> System.out.println(k+":"+v));
     }
 
 
