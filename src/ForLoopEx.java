@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Compator {
+public class ForLoopEx {
 
 
     public static void main(String[] args) {
@@ -21,7 +21,7 @@ public class Compator {
 
         Iterator<String> it = company.listIterator();
 
-        while (it.hasNext()){
+        while (it.hasNext()) {
 
             System.out.println(it.next());
         }
@@ -29,11 +29,16 @@ public class Compator {
          * for loop
          */
 
-        for (Integer i  = 0 ; i <company.size() ; i++){
+        for (Integer i = 0; i < company.size(); i++) {
 
-            System.out.println(company.get(i));
+            System.out.println("------一般for loop------" + company.get(i));
         }
-
+        /**
+         * for each
+         */
+        for (String c : company) {
+            System.out.println("foreach----::" + c);
+        }
 
         /**
          *  Sort
@@ -44,20 +49,35 @@ public class Compator {
         company.sort(Comparator.nullsLast(Comparator.reverseOrder()));
         System.out.println(company);
 
-        //lambda
+        /**
+         * lambda
+         */
         company.forEach(c -> System.out.println(c));
 
+        /**
+         * lambda + Optional
+         */
+        company.forEach(cc -> {
+            System.out.println(Optional.ofNullable(cc));
+            System.out.println("+++" + cc);
+        });
 
+        /**
+         * lambda + stream
+         */
 
+        company.stream()
+                .filter(Objects::nonNull)
+                .forEach(cc -> System.out.println("stream-->" + cc));
     }
-
-
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
