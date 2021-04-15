@@ -12,7 +12,10 @@ public class StreamMap {
         List<String> words = Arrays.asList("Java8" , "Lambda" , "Stream" , "Test");
 
         words.stream()
-                .map(word -> word.length())
+                .map(word -> {
+                    System.out.println(word.length());
+                    return word.length();
+                })
                 .collect(Collectors.toList())
                 .forEach(w -> System.out.println(w));
     }
