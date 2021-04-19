@@ -10,7 +10,8 @@ public class Set {
         role.setLevel(10);
 
         drawFight(role);
-
+        //靜態方法直接透過 "." 去獲取
+        Set.drawFight(role);
     }
     static void drawFight(Role role){
         System.out.println(role.getName() + "--->");
