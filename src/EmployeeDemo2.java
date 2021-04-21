@@ -34,6 +34,9 @@ public class EmployeeDemo2 {
                         .reduce((total, age) -> total + age)
                         .getAsInt() / males);
 
+        /**
+         * 找年紀最大的 male 用reduce方法
+         */
         int max = employees.stream()
                 .filter(employee -> employee.getGender() == Employee.GENDER.MALE)
                 .mapToInt(Employee::getAge)
