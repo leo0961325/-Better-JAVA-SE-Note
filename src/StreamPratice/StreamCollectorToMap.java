@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
  *  2.Function.identity() 獲取所有屬性值，記得Map改<String , project>
  *  3.collect(Collectors.groupingBy(Project::getAuthor) 類似SQL的GroupBy，這裡按照作者分組
  *  4.collect(Collectors.partitioningBy(StreamCollectorToMap::isBackEnd)  partitioningBy數據分區
+ *  PartitioningBy是一个特别的groupingBy，PartitioningBy返回一个Map，这个Map是以boolean值为key，从而将stream分成两部分，一部分是匹配PartitioningBy条件的，一部分是不满足条件的：
  *
  */
 public class StreamCollectorToMap {
