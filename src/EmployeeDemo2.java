@@ -21,7 +21,8 @@ public class EmployeeDemo2 {
         int sum = employees.stream()
                 .filter(employee -> employee.getGender() == Employee.GENDER.MALE)
                 .mapToInt(Employee::getAge)
-                .reduce((total, age) -> total + age)
+                .
+                        reduce((total, age) -> total + age)
                 .getAsInt();
 
         long males = employees.stream()
