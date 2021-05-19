@@ -2,6 +2,7 @@ package StreamPratice;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class ReduceStream {
 
@@ -29,6 +30,20 @@ public class ReduceStream {
                     return x+y;
                 });
         System.out.println(reduceSum);
+
+
+        /**
+         *  練習根據索引值找value
+         *  map轉int
+         *  int再轉obj
+         */
+        String [] strToInt= {"0","1","2","3","4"};;
+        String [] strTxt = {"蛋糕","鳳梨" ,"香蕉","蘋果","牛奶"};
+
+        Stream.of(strToInt).mapToInt(v -> Integer.parseInt(v)) //先將strToInt轉成Int索引模式
+                      .mapToObj(inx -> strTxt[inx])  //再根據轉換成的int 丟到mapToObj找索引值
+                      .forEach(s -> System.out.println(s));
+
     }
 
 
