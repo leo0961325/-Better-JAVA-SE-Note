@@ -20,6 +20,9 @@ public class MapKeySet {
         map.put("01", "aaa");
         map.put("02","bbb");
         map.put("03", "wangwu");
+        map.put("04","leo");
+
+        System.out.println("<=====================map.keySet();====================================>");
 
         //第一種  keySet()
         Set<String> keySet = map.keySet();
@@ -35,7 +38,7 @@ public class MapKeySet {
 
         }
 
-        System.out.println("<=========================================================>");
+        System.out.println("<=====================map.entrySet() <Iterator>====================================>");
 
 
         //第二種  map.entrySet() <Iterator>
@@ -52,7 +55,7 @@ public class MapKeySet {
             System.out.println(key + " : " + value );
 
         }
-        System.out.println("<=========================================================>");
+        System.out.println("<======================map.entrySet() 直接用for===================================>");
 
 
         //第三種 map.entrySet() 直接用for
@@ -62,10 +65,21 @@ public class MapKeySet {
 
         }
 
-        System.out.println("<=========================================================>");
+        System.out.println("<=====================lambda====================================>");
         //第四種 lambda
-        map.forEach((K , V) -> System.out.println( "lanbda :" + K + "-> " + V));
+        map.forEach((K , V) -> System.out.println( "lambda :" + K + "-> " + V));
 
+
+        //第五種 iterator
+        System.out.println("<=========================iterator================================>");
+        Set set = map.entrySet();
+        Iterator iterator = set.iterator();
+        while (iterator.hasNext()){
+
+            Map.Entry entry = (Map.Entry) iterator.next();
+
+            System.out.println(entry.getKey() + ":" + entry.getValue());
+        }
 
 
     }
