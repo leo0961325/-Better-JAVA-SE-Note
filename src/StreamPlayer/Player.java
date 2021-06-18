@@ -1,3 +1,5 @@
+package StreamPlayer;
+
 public class Player {
 
 

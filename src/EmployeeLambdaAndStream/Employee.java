@@ -1,3 +1,5 @@
+package EmployeeLambdaAndStream;
+
 public class Employee {
 
     enum GENDER{FEMALE , MALE}

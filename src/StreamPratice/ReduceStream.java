@@ -23,7 +23,7 @@ public class ReduceStream {
          * 必須接受2個引數 (X,Y)
          * Stream Reduce (x,y) x是上一個走訪結果 y是目前的
          */
-
+        System.out.println("<=================Stream reduce==========================>");
         Integer reduceSum = numbers.stream()
                 .reduce(0 , (x,y) -> {
                     System.out.println(x+y);
@@ -31,7 +31,7 @@ public class ReduceStream {
                 });
         System.out.println(reduceSum);
 
-
+        System.out.println("<=================map轉int==========================>");
         /**
          *  練習根據索引值找value
          *  map轉int

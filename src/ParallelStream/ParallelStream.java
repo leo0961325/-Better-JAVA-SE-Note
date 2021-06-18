@@ -1,6 +1,4 @@
-package SE14;
-
-import SE14.AbstractAndPoly.Set;
+package ParallelStream;
 
 import java.util.List;
 

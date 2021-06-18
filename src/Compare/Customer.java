@@ -1,3 +1,5 @@
+package Compare;
+
 public class Customer {
 
 
@@ -14,7 +16,7 @@ public class Customer {
     }
 
     public String toString() {
-        return String.format("Customer(%s %s, %d)", firstName, lastName, zipCode);
+        return String.format("Compare.Customer(%s %s, %d)", firstName, lastName, zipCode);
     }
 
     public String getFirstName() { return firstName; }

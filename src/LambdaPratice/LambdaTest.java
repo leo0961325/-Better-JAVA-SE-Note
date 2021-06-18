@@ -1,3 +1,5 @@
+package LambdaPratice;
+
 import java.util.*;
 
 public class LambdaTest {

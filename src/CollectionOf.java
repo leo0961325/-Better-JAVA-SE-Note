@@ -13,8 +13,7 @@ public class CollectionOf {
         //Map of
         Map<String,Integer> scoreMap = Map.of("miko",29 ,"Eric",35);
 
-        scoreMap.put("leoo",12);
-
+        System.out.println(scoreMap);
 
     }
 

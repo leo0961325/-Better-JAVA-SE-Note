@@ -1,4 +1,4 @@
-package SE14;
+package ParallelStream;
 
 import java.util.ArrayList;
 import java.util.List;

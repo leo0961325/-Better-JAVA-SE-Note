@@ -1,4 +1,4 @@
-package SE14.AbstractAndPoly;
+package ParallelStream.AbstractAndPoly;
 
 public abstract class Role {
 

@@ -1,3 +1,7 @@
+package Compare;
+
+import Compare.StringOrder;
+
 import java.util.Arrays;
 
 public class StringOrderDemo {
@@ -8,7 +12,7 @@ public class StringOrderDemo {
         String[] names = {"Justin", "caterpillar", "zzush"};
         Arrays.sort(names,(name1 , name2) -> StringOrder.byLength(name1,name2));
 
-        //Arrays.sort(names,StringOrder::byLength);
+        //Arrays.sort(names,Compare.StringOrder::byLength);
         System.out.println(Arrays.toString(names));
 
         Arrays.sort(names,String::compareToIgnoreCase);
