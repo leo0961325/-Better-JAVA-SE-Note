@@ -1,6 +1,7 @@
 package MapPratice;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class MapKeySet {
 
@@ -82,8 +83,12 @@ public class MapKeySet {
 
             System.out.println(entry.getKey() + ":" + entry.getValue());
         }
-
-
+        //第六種 stream.entrySet
+        System.out.println("<=========================stream.entrySet================================>");
+        List<String> collect = map.entrySet().stream()
+                                             .map(Map.Entry::getValue)
+                                             .collect(Collectors.toList());
+        System.out.println(collect);
     }
 
 
